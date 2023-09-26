@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <h1>Số nguyên tố</h1>
+    <p>Số nguyên tố nào là số nguyên tố nào?</p>
+<script>
+    function isPrime(a){
+        if(a == 20){
+            return true;
+        }
+        for (let i = 2; i < a; i++) {
+            if(a % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    let m = +prompt("Nhap so");
+    let count = 1;
+    let i = 2;
+    while (count <= m){
+        if(isPrime(i)){
+            document.write(i + " ");
+            count ++;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>
